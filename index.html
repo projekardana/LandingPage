@@ -1,154 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pustaka Muslim Official | Toko Buku Muslim Terpercaya</title>
-    <!--Style CSS-->
-    <link rel="stylesheet" href="Style/app.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pustaka Muslim Official | Toko Buku Muslim Terpercaya</title>
+  
+  <!--Style CSS-->
+  <link rel="stylesheet" href="Style/app.css" />
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!--Font Awesome-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usknVF8KeaPSNeFvSKICo7QIAhXoYSeuFLY+Ug7high0L/NvJCCadRiXj+nRqQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+  </div>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
 
-    <!--Font Awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!--Header Navbar-->
-    <header class="navbar-container">
-      <div class="logo">
-        <img src="img/Logo.png" alt="Logo Toko Buku" />
-      </div>
-      <nav class="nav-list">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">Profile</a></li>
-          <li><a href="#artikel">Article</a></li>
-          <li><a href="#">Product</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <!--Main Content-->
-    <main>
+  <!--Header Navbar-->
+  <header class="navbar-container">
+    <div class="logo">
+      <img src="img/Logo.png" alt="Logo Toko Buku" />
+    </div>
+    
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav-list" id="navList">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#products">Product</a></li>
+        <li><a href="#artikel">Article</a></li>
+        <li><a href="#testimonial">Review</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Main Content-->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
       <div class="content">
         <div class="content-description">
-          <h1 class="title">Pustaka Muslim Official Store</h1>
-          <p>
+          <h1 class="title" data-aos="fade-right">Pustaka Muslim Official Store</h1>
+          <p data-aos="fade-right" data-aos-delay="100">
             Cari Buku Favoritmu di Pustaka Muslim Official. Kami Menyediakan
             Banyak Koleksi Buku Pelajaran, Kitab Suci Al Qur'an, maupun Kitab
-            Salaf.
+            Salaf dengan Harga Terjangkau dan Kualitas Terbaik.
           </p>
-          <button>BELI BUKU SEKARANG</button>
+          <button class="btn-primary" data-aos="fade-right" data-aos-delay="200">
+            <i class="fas fa-shopping-cart"></i> BELI BUKU SEKARANG
+          </button>
         </div>
-        <div class="content-image">
-          <img src="img/jembatan-ilmu.jpg" />
+        <div class="content-image" data-aos="fade-left">
+          <img src="img/jembatan-ilmu.jpg" alt="Hero Image" />
         </div>
       </div>
+    </section>
 
-      <div class="sosial-box">
-        <ul>
-          <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-telegram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-          </li>
-        </ul>
-      </div>
+    <!-- Social Links -->
+    <div class="sosial-box">
+      <ul>
+        <li>
+          <a href="#" title="Instagram" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Facebook" class="social-link">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Telegram" class="social-link">
+            <i class="fab fa-telegram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="WhatsApp" class="social-link">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-      <!--Aside-->
-      <aside id="about">
-        <div class="about">
-          <h2>Tentang Kami</h2>
-          <img src="img/body.jpg" alt="aboutme">
-        </aside>
-          <div class="content">
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about">
+        <h2 data-aos="fade-up">Tentang Kami</h2>
+        <div class="about-content">
+          <img src="img/body.jpg" alt="About Us" data-aos="fade-right" />
+          <div class="about-text" data-aos="fade-left">
             <p>
-              Toko Buku Muslim Official Store Terpercaya menyediakan Buku Buku
-              Karangan Para Ulama yang berasaskan Al Qur'an dan Sunnah. kami
-              hadir untuk semua kalangan ummat islam dunia sebagai platform
+              Toko Buku Muslim Official Store Terpercaya menyediakan Buku-Buku
+              Karangan Para Ulama yang berasaskan Al Qur'an dan Sunnah. Kami
+              hadir untuk semua kalangan umat Islam dunia sebagai platform
               ilmuwan para Ulama terkemuka yang mengupas tuntas berbagai tema
-              keislaman Perkaya Iman, Islam, tingkatkan Pemahaman, dan Dekatkan
-              diri pada Allah SWT.<a href="#">Selengkapnya</a>
+              keislaman, Perkaya Iman, Tingkatkan Pemahaman, dan Dekatkan
+              diri pada Allah SWT.
             </p>
+            <a href="#" class="btn-secondary">
+              Selengkapnya <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!--Article-->
-        
-        <h2>Article</h2>
-        <article id="artikel" class="artikel">
-            </div>
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+      <h2 data-aos="fade-up">Produk Terlaris</h2>
+      <div class="products-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/Al-Qur'an.jpg" alt="Al-Qur'an">
+            <span class="badge">Bestseller</span>
+          </div>
+          <h3>Al-Qur'an Premium</h3>
+          <p class="price">Rp 250.000</p>
+          <p class="description">Mushaf Al-Qur'an dengan terjemahan bahasa Indonesia</p>
+          <button class="btn-add-cart">
+            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+          </button>
+        </div>
 
-            <!--Artikel Pertama-->
-            <div class="card">
-                <img src="img/Al-Qur'an.jpg">
-                <h3 class="title">Al Qur'an</h3>
-                <p class="card-text">
-                    Al-Qur'an adalah kitab suci umat Islam yang dianggap sebagai kalam Allah yang diturunkan kepada Nabi Muhammad SAW 
-                    melalui perantaraan malaikat Jibril. Kitab suci Al-Qur'an merupakan pedoman hidup 
-                    bagi umat Islam dan menjadi sumber ajaran agama Islam. Al-Qur'an memiliki kedudukan yang sangat mulia dalam kehidupan umat Islam, 
-                    sehingga selalu dihormati dan dijunjung tinggi.
-                </p>
-                <a href="#" class="button">Selengkapnya</a>
-            </div>
-            <!--Artikel Kedua-->
-            <div class="card">
-                <img src="img/Sirah Nabawiyah.jpg" width="100" height="100">
-                <h3 class="title">Sirah Nabawiyah</h3>
-                <p class="card-text">
-                    Sirah Nabawiyah mencakup berbagai aspek kehidupan Nabi Muhammad, 
-                    mulai dari masa kecil, kehidupan di Mekah sebelum kenabiannya, hijrah ke Madinah, hingga masa kepemimpinan beliau di Madinah. 
-                    Dalam Sirah Nabawiyah dipaparkan perjuangan beliau 
-                    dalam menghadapi rintangan dan tantangan, baik dari musuh-musuh Islam maupun dari kelompok-kelompok 
-                    suku yang menentang ajaran Islam.
-                </p>
-                <a href="#" class="button">Selengkapnya</a>
-            </div>
-            <!--Artikel Ketiga-->
-            <div class="card">
-                <img src="img/Rukun Iman.jpg" width="100" height="100">
-                <h3 class="title">Rukun Iman</h3>
-                <p class="card-text">
-                    Iman kepada malaikat Allah SWT merupakan salah satu rukun iman yang wajib diyakini oleh umat Islam. 
-                    Malaikat merupakan makhluk Allah yang tidak terlihat oleh manusia, diciptakan dari nur (cahaya) dan diberikan tugas oleh Allah untuk melaksanakan kehendak-Nya. 
-                    Keyakinan kepada malaikat merupakan bagian penting dalam ajaran agama Islam karena malaikat memainkan peran yang sangat penting dalam menjalankan berbagai tugas dan fungsi yang telah ditetapkan oleh Allah SWT.
-                </p>
-                <a href="#" class="button">Selengkapnya</a>
-            </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/Sirah Nabawiyah.jpg" alt="Sirah Nabawiyah">
+            <span class="badge">Populer</span>
+          </div>
+          <h3>Sirah Nabawiyah</h3>
+          <p class="price">Rp 180.000</p>
+          <p class="description">Sejarah lengkap kehidupan Nabi Muhammad SAW</p>
+          <button class="btn-add-cart">
+            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+          </button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/Rukun Iman.jpg" alt="Rukun Iman">
+            <span class="badge">Trending</span>
+          </div>
+          <h3>Rukun Iman & Rukun Islam</h3>
+          <p class="price">Rp 150.000</p>
+          <p class="description">Panduan lengkap tentang fondasi-fondasi Islam</p>
+          <button class="btn-add-cart">
+            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Section -->
+    <section class="artikel-section" id="artikel">
+      <h2 data-aos="fade-up">Artikel Menarik</h2>
+      <div class="artikel" data-aos="fade-up" data-aos-delay="100">
+        <!-- Artikel Pertama -->
+        <article class="card">
+          <div class="card-image">
+            <img src="img/Al-Qur'an.jpg" alt="Al Qur'an">
+          </div>
+          <div class="card-content">
+            <h3 class="title">Al Qur'an</h3>
+            <p class="card-text">
+              Al-Qur'an adalah kitab suci umat Islam yang dianggap sebagai kalam Allah yang diturunkan kepada Nabi Muhammad SAW 
+              melalui perantaraan malaikat Jibril. Kitab suci Al-Qur'an merupakan pedoman hidup 
+              bagi umat Islam dan menjadi sumber ajaran agama Islam.
+            </p>
+            <a href="#" class="button">
+              Selengkapnya <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </article>
-    </main>
 
-    <footer>
+        <!-- Artikel Kedua -->
+        <article class="card">
+          <div class="card-image">
+            <img src="img/Sirah Nabawiyah.jpg" alt="Sirah Nabawiyah">
+          </div>
+          <div class="card-content">
+            <h3 class="title">Sirah Nabawiyah</h3>
+            <p class="card-text">
+              Sirah Nabawiyah mencakup berbagai aspek kehidupan Nabi Muhammad, 
+              mulai dari masa kecil, kehidupan di Mekah sebelum kenabiannya, hijrah ke Madinah, hingga masa kepemimpinan beliau di Madinah.
+            </p>
+            <a href="#" class="button">
+              Selengkapnya <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Artikel Ketiga -->
+        <article class="card">
+          <div class="card-image">
+            <img src="img/Rukun Iman.jpg" alt="Rukun Iman">
+          </div>
+          <div class="card-content">
+            <h3 class="title">Rukun Iman</h3>
+            <p class="card-text">
+              Iman kepada malaikat Allah SWT merupakan salah satu rukun iman yang wajib diyakini oleh umat Islam. 
+              Malaikat merupakan makhluk Allah yang tidak terlihat oleh manusia, diciptakan dari nur (cahaya).
+            </p>
+            <a href="#" class="button">
+              Selengkapnya <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section" id="testimonial">
+      <h2 data-aos="fade-up">Testimoni Pelanggan</h2>
+      <div class="testimonial-carousel" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card active">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Pelayanan sangat memuaskan, buku sampai dalam kondisi sempurna. Saya akan terus berbelanja di sini!"</p>
+          <p class="testimonial-author">- Muhammad Hasan</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Koleksi buku yang sangat lengkap dan harga sangat terjangkau. Rekomendasi toko buku terbaik!"</p>
+          <p class="testimonial-author">- Siti Nurhaliza</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Pengiriman cepat dan aman. Tim customer service sangat responsif dan membantu."</p>
+          <p class="testimonial-author">- Ahmad Wijaya</p>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="prev-btn" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next-btn" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="contact">
+      <h2 data-aos="fade-up">Berlangganan Newsletter</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Dapatkan penawaran eksklusif dan informasi buku terbaru langsung ke email Anda
+      </p>
+      <form class="newsletter-form" id="newsletterForm" data-aos="fade-up" data-aos-delay="200">
+        <input 
+          type="email" 
+          placeholder="Masukkan email Anda" 
+          required
+          id="emailInput"
+        >
+        <button type="submit" class="btn-subscribe">
+          <i class="fas fa-envelope"></i> Subscribe
+        </button>
+      </form>
+      <div id="formMessage" class="form-message"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
       <div class="socials">
         <h3>Pustaka Muslim Official Store</h3>
         <p>Jl. Masjid No. 01 Medan Sumatera Utara</p>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-telegram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <p>Email: <a href="mailto:info@pustaka-muslim.com">info@pustaka-muslim.com</a></p>
+        <p>Telepon: <a href="tel:+6281234567890">+62 812 3456 7890</a></p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" class="social-icon" title="Telegram">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="#" class="social-icon" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
       </div>
-      <div class="credit">
-        <p>Created by | <a href="">MuhammadDendiArdana</a>. | &copy; 2024.</p>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Produk</a></li>
+          <li><a href="#artikel">Artikel</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+      <div class="footer-info">
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="#">Kebijakan Privasi</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+          <li><a href="#">Panduan Pengiriman</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="credit">
+      <p>Created by | <a href="https://github.com/projekardana">MuhammadDendiArdana</a> | &copy; 2024 Pustaka Muslim Official Store.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
 </html>
